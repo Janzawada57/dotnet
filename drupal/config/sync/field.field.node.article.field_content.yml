@@ -1,0 +1,78 @@
+uuid: 54c3819e-a4d7-4ecb-a838-0df937cedf85
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.article
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.card
+    - paragraphs.paragraphs_type.card_group
+    - paragraphs.paragraphs_type.link
+    - paragraphs.paragraphs_type.media
+    - paragraphs.paragraphs_type.promo
+    - paragraphs.paragraphs_type.section
+    - paragraphs.paragraphs_type.text_formatted
+  module:
+    - entity_reference_revisions
+id: node.article.field_content
+field_name: field_content
+entity_type: node
+bundle: article
+label: Content
+description: 'Items added will display in the primary content region of the page.'
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      text_formatted: text_formatted
+      banner: banner
+      card: card
+      card_group: card_group
+      link: link
+      media: media
+      promo: promo
+      section: section
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: -24
+        enabled: true
+      card:
+        weight: -23
+        enabled: true
+      card_group:
+        weight: -22
+        enabled: true
+      entity_reference:
+        weight: -21
+        enabled: false
+      from_library:
+        weight: -15
+        enabled: false
+      jumbotron:
+        weight: -20
+        enabled: false
+      link:
+        weight: -19
+        enabled: true
+      listing:
+        weight: -14
+        enabled: false
+      media:
+        weight: -18
+        enabled: true
+      promo:
+        weight: -17
+        enabled: true
+      section:
+        weight: -16
+        enabled: true
+      text_formatted:
+        weight: -25
+        enabled: true
+field_type: entity_reference_revisions

@@ -1,0 +1,63 @@
+uuid: ef701fa6-65cc-4ce7-9998-ea17f658af0c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_content
+    - paragraphs.paragraphs_type.banner
+    - paragraphs.paragraphs_type.link
+    - paragraphs.paragraphs_type.text_formatted
+  module:
+    - entity_reference_revisions
+id: paragraph.banner.field_content
+field_name: field_content
+entity_type: paragraph
+bundle: banner
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      link: link
+      text_formatted: text_formatted
+    negate: 0
+    target_bundles_drag_drop:
+      banner:
+        weight: 12
+        enabled: false
+      card:
+        weight: 13
+        enabled: false
+      card_group:
+        weight: 14
+        enabled: false
+      entity_reference:
+        weight: 15
+        enabled: false
+      from_library:
+        weight: 16
+        enabled: false
+      jumbotron:
+        weight: 17
+        enabled: false
+      link:
+        weight: 18
+        enabled: true
+      listing:
+        weight: 19
+        enabled: false
+      media:
+        weight: 20
+        enabled: false
+      section:
+        weight: 21
+        enabled: false
+      text_formatted:
+        weight: 22
+        enabled: true
+field_type: entity_reference_revisions

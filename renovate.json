@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "@nuxtjs"
+  ],
+  "ignoreDeps": [
+    "drupal/gin_toolbar",
+    "php"
+  ]
+}

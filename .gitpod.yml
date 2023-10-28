@@ -1,0 +1,67 @@
+image:
+  file: .gitpod/Dockerfile
+
+tasks:
+  - init: |
+      # Installing DDev and Drupal backend.
+      $GITPOD_REPO_ROOT/.gitpod/scripts/ddev-setup.sh
+      cd $GITPOD_REPO_ROOT/drupal && ddev drupal-install
+      # Installing Nuxt/Druxt frontend.
+      $GITPOD_REPO_ROOT/.gitpod/scripts/nuxt-setup.sh
+    command: |
+      $GITPOD_REPO_ROOT/.gitpod/scripts/ddev-setup.sh
+      $GITPOD_REPO_ROOT/.gitpod/scripts/nuxt-setup.sh
+      cd $GITPOD_REPO_ROOT/nuxt && NUXT_TELEMETRY_DISABLED=1 yarn dev
+
+# VScode xdebug extension
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
+    - editorconfig.editorconfig
+    - felixfbecker.php-debug
+    - octref.vetur
+
+ports:
+  # Drupal
+  - port: 8080
+    onOpen: ignore
+    visibility: public
+
+  # Nuxt/Druxt
+  - port: 3000
+    onOpen: ignore
+    visibility: public
+
+  # Nuxt/Druxt
+  - port: 3003
+    onOpen: ignore
+    visibility: public
+  # Used by ddev - local db clients
+  - port: 3306
+    onOpen: ignore
+  # Used by MailHog
+  - port: 8027
+    onOpen: ignore
+  # Used by phpMyAdmin
+  - port: 8036
+    onOpen: ignore
+  # Direct-connect ddev-webserver port that is the main port
+  - port: 8080
+    onOpen: ignore
+  # Ignore host https port
+  - port: 8443
+    onOpen: ignore
+  # xdebug port
+  - port: 9000
+    onOpen: ignore
+
+github:
+  prebuilds:
+    master: true
+    branches: true
+    pullRequests: true
+    pullRequestsFromForks: true
+    addCheck: true
+    addComment: false
+    addBadge: true
+    addLabel: true

@@ -1,0 +1,63 @@
+{
+    "uuid": [
+        {
+            "value": "a72faba4-778b-4b9a-a867-cefeff170d1c"
+        }
+    ],
+    "langcode": [
+        {
+            "value": "en"
+        }
+    ],
+    "owner_id": [
+        {
+            "target_type": "user",
+            "target_uuid": "71ff0341-88b1-40c6-bf6a-1131b20cd36a"
+        }
+    ],
+    "client_id": [
+        {
+            "value": "default_consumer"
+        }
+    ],
+    "label": [
+        {
+            "value": "Default Consumer"
+        }
+    ],
+    "description": [
+        {
+            "value": "This is the default consumer. This was created programmatically when the Consumers module was first installed. Feel free to edit, or delete this."
+        }
+    ],
+    "image": [
+        {
+            "target_id": null,
+            "alt": null,
+            "title": null,
+            "width": null,
+            "height": null
+        }
+    ],
+    "third_party": [
+        {
+            "value": true
+        }
+    ],
+    "is_default": [
+        {
+            "value": true
+        }
+    ],
+    "default_langcode": [
+        {
+            "value": true
+        }
+    ],
+    "secret": [],
+    "confidential": [],
+    "roles": [],
+    "redirect": [],
+    "user_id": [],
+    "pkce": []
+}
